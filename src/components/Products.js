@@ -8,8 +8,8 @@ const Products = props => {
     return (
         <div>
             <h2>
-                <span>Kitap Listesi</span>
-                <Link to="/cart">Sepetim</Link>
+                <span>Book List</span>
+                <Link to="/cart">My Cart</Link>
             </h2>
             {props.bookList.map(book => (
                 <div key={book.id} className="book">
@@ -21,7 +21,7 @@ const Products = props => {
                         <h4>{book.name}</h4>
                         <p>{book.author}</p>
                         <p>{book.price} &#8378; </p>
-                        <button onClick={() => props.sepeteEkle(book)} >Sepete Ekle</button>
+                        <button onClick={() => props.sepeteEkle(book)} >Add To Cart</button>
                     </div>
                 </div>
             ))}

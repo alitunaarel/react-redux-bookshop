@@ -11,10 +11,10 @@ const Cart = (props) => {
     return (
         <div className="cartdiv">
             <h2>
-                <Link to="/">Kitap Listesi</Link> <span>Sepetim</span>
+                <Link to="/">List of Book</Link> <span>My Cart</span>
             </h2>
 
-            <h3>Toplam Sepet Tutarı: &#8378;{totalPrice}</h3>
+            <h3>Total Price: &#8378;{totalPrice}</h3>
 
             {props.cart.map((book, i) => (
                 <div key={i} className="book">
@@ -24,12 +24,12 @@ const Cart = (props) => {
                     />
                     <div>
                         <h4>{book.name}</h4>
-                        <p>Yazar: {book.author}</p>
-                        <p>Fiyat: &#8378;{book.price}</p>
+                        <p>Author: {book.author}</p>
+                        <p>Price: &#8378;{book.price}</p>
 
 
                         <button>-</button>
-                        <button>Sepetten Çıkar</button>
+                        <button>Remove From Cart</button>
                         <button>+</button>
                     </div>
                 </div>
